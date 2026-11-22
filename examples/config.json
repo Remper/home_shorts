@@ -1,0 +1,21 @@
+{
+  "listen": "127.0.0.1",
+  "port": 8080,
+  "database": "/var/lib/shortlinks/links.db",
+  "publicBaseUrl": "https://s.example.net",
+  "allowedTargetHosts": ["reports.example.net"],
+  "codeLength": 5,
+  "patternRoutes": [
+    {
+      "name": "inventory",
+      "regex": "[A-Z][0-9]{3}",
+      "target": "https://reports.example.net/artifacts/ART_ID?path={id}.html"
+    }
+  ],
+  "clients": {
+    "publisher": {
+      "tokenSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "scope": "write"
+    }
+  }
+}
